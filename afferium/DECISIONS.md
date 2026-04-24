@@ -4,6 +4,42 @@ _Append-only log of material decisions for Afferium. New entries go at the TOP. 
 
 ---
 
+## 2026-04-23 — Sensorium workspace backed up to GitHub (private, off-machine)
+
+**Decision / accomplishment:** The complete Sensorium workspace — including Afferium brand documentation, MEMORY.md, SOUL.md, AGENTS.md, and all operating files — is now backed up as a private git repository at `github.com/afferium/afferium`.
+
+**What exists now:**
+- Local git repo in `C:\Users\coral\.openclaw\Sensorium` with one commit (`c91d9b1`).
+- Remote origin at `https://github.com/afferium/afferium.git` (private).
+- GitHub personal account: `proto-speech` (2FA enabled, Google Authenticator).
+- GitHub organization: `afferium` (owner: proto-speech).
+- Repo transferred from `Proto-Speech/Afferium` to `afferium/afferium` so ownership is under the company org, not Coral's personal account.
+- Repo name retained as `afferium` (not renamed to `sensorium`) per Coral's call; can revisit later if name becomes awkward.
+- Authentication: HTTPS + Personal Access Token (classic, 90-day, `repo` scope only). Token stored in Bitwarden.
+
+**Disaster recovery posture after today:**
+- Sensorium workspace: ✅ on laptop, ✅ on GitHub. Two copies, two locations.
+- Afferium wallet seed phrase: ✅ paper copy #1 (hidden in book). ⏳ paper copy #2 (planned, different location). ⏳ metal backup plate (later).
+- Afferium Gmail: ✅ strong password, ✅ 2FA, ✅ backup codes.
+- Bitwarden: ✅ master password on paper, ✅ 2FA, ✅ recovery code on paper.
+
+**Status:** Off-machine backup live. Tonight's work preserved against any single-point-of-failure.
+
+---
+
+## 2026-04-23 — GitHub identity structure: personal `proto-speech` + org `afferium`
+
+**Decision:** Coral's personal GitHub account is `github.com/proto-speech`. The Afferium company GitHub presence will be an **organization** (not a user account) at `github.com/afferium`, with `proto-speech` as owner. All Afferium repos live under the org.
+
+**Reasoning:**
+- GitHub's org/user distinction matters: orgs support multiple members, role-based access, and cleaner separation of personal vs. company work.
+- The handle `protospeech` (no hyphen) was taken by an unrelated party. `proto-speech` was available and is consistent with Coral's `@protospeech` personal brand elsewhere.
+- The handle `afferium` (the clean form) was available on GitHub — reserving it for the org rather than burning it on a personal account.
+
+**Status:** Personal account `proto-speech` created with 2FA enabled. Organization `afferium` creation pending in this session.
+
+---
+
 ## 2026-04-23 — Phase 1 of Urbit playbook complete: self-custodial wallet live, backup verified
 
 **Decision / accomplishment:** Coral completed Phase 1 of `URBIT-PLAYBOOK.md`. Rabby wallet installed in Brave on Windows, 12-word seed phrase written on paper, and recovery drill performed successfully (uninstalled Rabby, reimported from written phrase, verified address matched).

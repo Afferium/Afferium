@@ -18,7 +18,7 @@ This is load-bearing for the project. The Sensorium thesis is that a new nervous
 
 2. **It's in the Sensorium register.** Latin-scientific root, -ium ending, three syllables, stress on the second. Reads clean on a book jacket. Works as a band name, a publisher imprint, a company, a product line.
 
-3. **It's available.** `.com`, `.io`, `.ai`, `.co` all clean at time of research. No trademark conflicts found. No one is using the word commercially.
+3. **It's available — everywhere.** `.com`, `.io`, `.ai`, `.co` all clean at time of research. No trademark conflicts found. No one is using the word commercially. Even **`afferium@gmail.com`** as a raw Gmail handle was unclaimed after 22 years of Gmail existence — which is almost implausible for any short pronounceable word, and reinforces that *Afferium* is a genuinely unclaimed slot in language.
 
 4. **Google underlines it in red.** That's a feature, not a bug. Every time a search engine flags the word as "not real," it demonstrates the thesis: the machines haven't caught up yet. In a few years, those same systems will canonize the word. Afferium will be a case study in its own origin.
 

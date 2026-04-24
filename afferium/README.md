@@ -23,14 +23,20 @@ Philosophy: **write it down immediately.** Memory lives in files, not in heads. 
 - `ROSTER.md` — eventual artist roster. Coral is Artist #1 (the prototype).
 - `DECISIONS.md` — append-only log of material decisions with date + reasoning. So we never have to re-argue a settled question.
 
-## Current status (as of 2026-04-23)
+## Current status (as of 2026-04-23, end of day 1)
 
 - ✅ Name selected: **Afferium**
 - ✅ Domains registered: `afferium.com`, `afferium.io` (in Coral's name)
+- ✅ Afferium Gmail hub: `afferium@gmail.com` (2FA on, backup codes on paper)
+- ✅ GitHub identity: `proto-speech` (personal) + `afferium` (org); Sensorium workspace pushed to private repo at `github.com/afferium/afferium`
+- ✅ Off-machine backup live (git remote on GitHub)
+- ✅ Self-custodial Ethereum wallet: created, seed phrase on paper, recovery drill verified
+- ✅ Bitwarden password manager: installed in both browsers, 2FA on
+- 🟡 Urbit planet: Phase 1 of playbook complete. Phases 2-8 ahead.
 - ⏳ Social handles: claim sweep not yet done
+- ⏳ Cloudflare DNS + email routing: not yet set up (afferium@gmail.com is the placeholder hub)
 - ⏳ USPTO trademark: not yet filed
 - ⏳ Entity (LLC): deferred until income/contracts require it
-- 🟡 Urbit planet: in progress — Phase 1 of playbook complete (wallet live + backup verified 2026-04-23). Phase 2 next.
 - ⏳ Tlon bot integration: exists via OpenClaw, not yet wired into Afferium workflow
 
 ## Active workstreams
