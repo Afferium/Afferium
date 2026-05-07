@@ -5,42 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afferium</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@400;600&display=swap');
+        
         body {
             margin: 0;
             padding: 0;
             background: #0a0a0f;
             color: #e0d4b8;
-            font-family: system-ui, sans-serif;
+            font-family: 'Source Serif Pro', serif;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow: hidden;
         }
+        
         .hero {
-            max-width: 90%;
+            max-width: 480px;
             width: 100%;
-            max-width: 560px;
+            padding: 1rem;
         }
+        
         video {
             width: 100%;
-            max-width: 520px;
+            max-width: 420px;
             height: auto;
             border-radius: 12px;
             box-shadow: 0 0 50px rgba(163, 139, 255, 0.5);
+            margin-bottom: 2rem;
         }
+        
         .slogan {
-            font-size: 1.6rem;
-            margin: 2rem 0 2.5rem;
+            font-size: 1.55rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
         }
+        
         .nexus {
-            font-size: 2.4rem;
+            font-size: 2.35rem;
             letter-spacing: 6px;
             color: #c38aff;
             text-decoration: none;
+            transition: all 0.4s ease;
         }
-        .nexus:hover { color: white; }
+        
+        .nexus:hover {
+            color: #fff;
+            text-shadow: 0 0 30px #c38aff;
+        }
     </style>
 </head>
 <body>
