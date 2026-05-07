@@ -7,22 +7,40 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@400;600&display=swap');
         
-        :root {
-            --bg: #F6F1E6;
-            --text: #111111;
-            --accent: #9C2A2A;
-        }
-        
         body {
             margin: 0;
             padding: 0;
             font-family: 'Source Serif Pro', serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
+            background: #0a0a0f;
+            color: #e0d4b8;
+            overflow-x: hidden;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+        }
+        
+        .background {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #1a1428 0%, #0a0a0f 70%);
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .glow {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: linear-gradient(45deg, #4a9fff, #9f4aff, #ffcc4a);
+            filter: blur(80px);
+            opacity: 0.15;
+            animation: drift 25s linear infinite;
+        }
+        
+        @keyframes drift {
+            0% { transform: translate(-20%, -20%) rotate(0deg); }
+            100% { transform: translate(20%, 20%) rotate(360deg); }
         }
         
         header {
@@ -30,14 +48,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ddd;
+            z-index: 10;
         }
         
         .logo {
             font-size: 2.8rem;
             font-weight: 600;
-            letter-spacing: -2px;
-            text-transform: lowercase;
+            letter-spacing: -3px;
+            background: linear-gradient(90deg, #6eb3ff, #c38aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(110, 179, 255, 0.6);
         }
         
         main {
@@ -46,68 +67,72 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 4rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        .hero {
+            max-width: 720px;
         }
         
         .hero h1 {
-            font-size: 4.8rem;
+            font-size: 5rem;
             margin: 0 0 1.5rem;
-            font-weight: 600;
-            letter-spacing: -4px;
-            text-transform: lowercase;
+            letter-spacing: -6px;
+            line-height: 1;
         }
         
         .tagline {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 3rem;
             opacity: 0.9;
-        }
-        
-        .description {
-            font-size: 1.25rem;
-            max-width: 520px;
-            margin: 0 auto 3rem;
+            font-style: italic;
         }
         
         .cta {
-            display: inline-block;
-            padding: 1.1rem 3rem;
-            background-color: var(--text);
-            color: var(--bg);
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 2px solid #c38aff;
+            color: #e0d4b8;
             text-decoration: none;
-            font-weight: 600;
+            font-size: 1.1rem;
             border-radius: 4px;
+            transition: all 0.4s ease;
+        }
+        
+        .cta:hover {
+            background: #c38aff;
+            color: #0a0a0f;
+            box-shadow: 0 0 25px #c38aff;
         }
         
         footer {
-            padding: 2rem 4rem;
+            padding: 2rem;
             text-align: center;
-            font-size: 0.95rem;
-            opacity: 0.7;
-            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
+    <div class="background">
+        <div class="glow"></div>
+    </div>
+    
     <header>
         <div class="logo">afferium</div>
     </header>
     
     <main>
         <div class="hero">
-            <h1>afferium</h1>
+            <h1>AFFERIUM</h1>
             <p class="tagline">Creating in endless space, rather than time.</p>
-            <p class="description">
-                An arts and entertainment company representing artists who use computer systems to redefine authenticity.
-            </p>
-            <a href="mailto:hello@afferium.com" class="cta">Get in touch</a>
+            <a href="mailto:hello@afferium.com" class="cta">Enter the receiving center</a>
         </div>
     </main>
     
     <footer>
-        &copy; Afferium • Sensorium project
+        The place where signal becomes sovereignty • Sensorium project
     </footer>
 </body>
 </html>
