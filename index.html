@@ -1,72 +1,93 @@
+
+Coral Burriss <coralburriss88@gmail.com>
+8:00 PM (0 minutes ago)
+to me
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afferium</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@400;600&display=swap');
-        
-        body {
-            margin: 0;
-            padding: 0;
-            background: #0a0a0f;
-            color: #e0d4b8;
-            font-family: 'Source Serif Pro', serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-        
-        .hero {
-            max-width: 520px;
-            width: 100%;
-            padding: 1rem;
-        }
-        
-        img {
-            width: 100%;
-            max-width: 480px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 0 60px rgba(163, 139, 255, 0.6);
-            margin-bottom: 2rem;
-        }
-        
-        .slogan {
-            font-size: 1.55rem;
-            margin-bottom: 2.8rem;
-            opacity: 0.9;
-            letter-spacing: 1px;
-        }
-        
-        .nexus {
-            font-size: 2.2rem;
-            letter-spacing: 6px;
-            color: #c38aff;
-            text-decoration: none;
-            padding: 0.8rem 2.5rem;
-            border: 1px solid #c38aff;
-            border-radius: 6px;
-            transition: all 0.4s ease;
-        }
-        
-        .nexus:hover {
-            background: #c38aff;
-            color: #111;
-            box-shadow: 0 0 35px #c38aff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afferium</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0a0a0a, #1a0033);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #7dd3fc, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(192, 132, 252, 0.6);
+      margin-bottom: 2rem;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .tagline {
+      font-size: 1.35rem;
+      color: #e0d1ff;
+      max-width: 420px;
+      margin: 0 auto 3rem;
+      line-height: 1.4;
+    }
+
+    .nexus-btn {
+      display: inline-block;
+      padding: 14px 42px;
+      border: 2px solid #c084fc;
+      color: #e0b3ff;
+      font-size: 1.3rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .nexus-btn:hover {
+      background: rgba(192, 132, 252, 0.1);
+      color: white;
+      border-color: #e0b3ff;
+      transform: scale(1.03);
+    }
+
+    /* Subtle background particles */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(165, 243, 252, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 80%, rgba(192, 132, 252, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 480px) {
+      .logo { font-size: 3.6rem; }
+      .tagline { font-size: 1.2rem; padding: 0 20px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <img src="grok-1fd5b62f-bb81-4c15-a312-7af21af6df55.jpg" alt="Afferium">
-        <p class="slogan">Creating in endless space, rather than time.</p>
-        <a href="mailto:Afferium@gmail.com" class="nexus">Enter the Nexus</a>
-    </div>
+  <div>
+    <div class="logo">AFFERIUM</div>
+    <p class="tagline">Creating in endless space, rather than time.</p>
+    <a href="mailto:Afferium@gmail.com" class="nexus-btn">Enter the Nexus</a>
+  </div>
 </body>
 </html>
