@@ -6,7 +6,7 @@
   <meta name="description" content="Afferium is the receiving center where signal, myth, recursion, and world-shattering ideas arrive.">
   <title>Afferium</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Roboto+Slab:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Spectral:wght@500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Orbitron:wght@500;600&family=Roboto+Slab:wght@500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Spectral:wght@500;600&display=swap');
 
     :root {
       --paper: #000000;
@@ -264,11 +264,27 @@
       margin-bottom: 8px;
     }
 
+    .definition-copy em .ff-pair {
+      display: inline-block;
+      position: relative;
+    }
+
+    .definition-copy em .ff-pair::after {
+      content: "";
+      position: absolute;
+      left: 0.3em;
+      right: 0.28em;
+      top: 0.49em;
+      height: 0.045em;
+      background: currentColor;
+      opacity: 0.82;
+    }
+
     .pronunciation {
       display: block;
       margin: 10px 0 18px;
       color: var(--muted);
-      font-family: "Inter", system-ui, sans-serif;
+      font-family: "Orbitron", "Inter", system-ui, sans-serif;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -344,7 +360,7 @@
     </header>
 
     <section class="definition" aria-label="Afferium definition">
-      <p class="definition-copy"><em>afferium</em><span class="pronunciation">af-fer-i-um / noun</span> A receiving center; the place where signal arrives before it becomes artifact, institution, myth, system, or god. A site of accumulation in which meaning is produced by use.</p>
+      <p class="definition-copy"><em>a<span class="ff-pair">ff</span>erium</em><span class="pronunciation">af-fer-i-um / noun</span> A receiving center; the place where signal arrives before it becomes artifact, institution, myth, system, or god. A site of accumulation in which meaning is produced by use.</p>
     </section>
 
     <nav class="link-row" aria-label="Site navigation">
