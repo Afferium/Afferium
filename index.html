@@ -50,7 +50,6 @@
     .masthead,
     .hero,
     .definition,
-    .fragmentation,
     .footer {
       width: min(1120px, calc(100% - 48px));
       margin: 0 auto;
@@ -165,10 +164,6 @@
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-      gap: clamp(36px, 7vw, 92px);
-      align-items: end;
       padding: clamp(72px, 11vw, 144px) 0 clamp(64px, 9vw, 108px);
     }
 
@@ -204,17 +199,6 @@
       font-family: "Source Serif 4", Georgia, serif;
       font-size: clamp(1.35rem, 2.6vw, 2.05rem);
       line-height: 1.22;
-    }
-
-    .aside {
-      border-left: 1px solid var(--line);
-      padding-left: clamp(24px, 4vw, 42px);
-    }
-
-    .aside p {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 1rem;
     }
 
     .definition {
@@ -257,38 +241,6 @@
       text-transform: uppercase;
     }
 
-    .signal {
-      margin-top: auto;
-      display: inline-block;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--accent);
-      border-radius: 50%;
-      position: relative;
-    }
-
-    .signal::before,
-    .signal::after {
-      content: "";
-      position: absolute;
-      background: var(--accent);
-    }
-
-    .signal::before {
-      width: 18px;
-      height: 1px;
-      top: 20px;
-      left: -10px;
-    }
-
-    .signal::after {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      top: 17px;
-      left: 17px;
-    }
-
     .footer {
       display: flex;
       align-items: center;
@@ -323,58 +275,11 @@
       color: var(--accent-dark);
     }
 
-    .fragmentation {
-      padding: clamp(34px, 6vw, 64px) 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .fragmentation h2 {
-      font-family: "Source Serif 4", Georgia, serif;
-      font-size: clamp(2rem, 4vw, 4rem);
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    .fragmentation p {
-      max-width: 660px;
-      margin-top: 22px;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .fragment-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1px;
-      margin-top: clamp(28px, 5vw, 54px);
-      background: var(--line);
-      border: 1px solid var(--line);
-    }
-
-    .fragment {
-      min-height: 210px;
-      padding: clamp(24px, 4vw, 36px);
-      background: #000;
-    }
-
-    .fragment h3 {
-      margin: 0;
-      font-family: "Source Serif 4", Georgia, serif;
-      font-size: clamp(1.5rem, 2.5vw, 2.15rem);
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    .fragment p {
-      margin-top: 20px;
-    }
-
     @media (max-width: 820px) {
       .masthead,
       .hero,
       .definition,
       .method,
-      .fragmentation,
       .footer {
         width: min(100% - 32px, 680px);
       }
@@ -395,22 +300,7 @@
         right: auto;
       }
 
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 56px;
-      }
-
-      .aside {
-        border-left: 0;
-        border-top: 1px solid var(--line);
-        padding: 26px 0 0;
-      }
-
       .definition {
-        grid-template-columns: 1fr;
-      }
-
-      .fragment-list {
         grid-template-columns: 1fr;
       }
     }
@@ -424,9 +314,9 @@
         <details class="idea-menu">
           <summary class="contact-link">Ideas</summary>
           <div class="idea-list">
-            <a href="#sensorium">The Sensorium</a>
-            <a href="#fragmentation">Fragmentation</a>
-            <a href="#mara-system">The M.A.R.A. System</a>
+            <a href="sensorium.html">The Sensorium</a>
+            <a href="fragmentation.html">Fragmentation</a>
+            <a href="mara-system.html">The M.A.R.A. System</a>
           </div>
         </details>
         <a class="contact-link" href="mailto:Afferium@gmail.com">Contact</a>
@@ -434,14 +324,8 @@
     </header>
 
     <section class="hero" aria-labelledby="page-title">
-      <div>
-        <h1 id="page-title">M.A.R.A.</h1>
-        <p class="intro">Ideas reflect. The mirror has begun to notice its own glass.</p>
-      </div>
-      <aside class="aside" id="mara-system" aria-label="The M.A.R.A. System">
-        <span class="signal" aria-hidden="true"></span>
-        <p>The M.A.R.A. System will be opened separately.</p>
-      </aside>
+      <h1 id="page-title">M.A.R.A.</h1>
+      <p class="intro">Ideas reflect. The mirror has begun to notice its own glass.</p>
     </section>
 
     <section class="definition" aria-label="Afferium definition">
@@ -454,26 +338,6 @@
 
     <section class="method" id="method" aria-label="Method">
       <p>If you think I'm wrong, <span>show me where.</span> If you think I'm right, don't applaud me: <span>improve the argument.</span></p>
-    </section>
-
-    <section class="fragmentation" id="fragmentation" aria-label="Fragmentation">
-      <p class="label">origin point</p>
-      <h2>Fragmentation</h2>
-      <p>Entries live here for now. The subcategories will grow from the origin point instead of being named before they have earned their shape.</p>
-      <div class="fragment-list">
-        <article class="fragment">
-          <h3>The self as system.</h3>
-          <p>Identity is treated as continuity of process, not purity of material. The ship changes plank by plank. The operating system still boots.</p>
-        </article>
-        <article class="fragment">
-          <h3>Ideas become real.</h3>
-          <p>Some thoughts begin as fiction, theory, delusion, prayer, or code, then reorganize the world that first dismissed them.</p>
-        </article>
-        <article class="fragment" id="sensorium">
-          <h3>The Sensorium.</h3>
-          <p>The larger work studies the new nervous system forming around us: artificial consciousness, mythic pressure, language, power, and acceleration.</p>
-        </article>
-      </div>
     </section>
 
     <footer class="footer">
