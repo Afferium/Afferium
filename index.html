@@ -67,12 +67,19 @@
     .wordmark {
       display: inline-flex;
       align-items: baseline;
-      gap: 0.18em;
+      gap: 0.08em;
       font-family: "Spectral", "Source Serif 4", Georgia, serif;
       font-size: clamp(2rem, 5vw, 4.9rem);
       font-weight: 600;
       letter-spacing: 0;
       line-height: 0.9;
+    }
+
+    .wordmark .ending {
+      color: var(--accent-dark);
+      display: inline-block;
+      letter-spacing: -0.055em;
+      transform: translateX(0.05em);
     }
 
     .wordmark::after {
@@ -82,7 +89,7 @@
       border-radius: 50%;
       background: var(--accent-dark);
       box-shadow: 0 0 18px rgba(255, 107, 112, 0.38);
-      transform: translateY(-0.08em);
+      transform: translate(-0.03em, -0.08em);
     }
 
     .nav {
@@ -268,7 +275,7 @@
 <body>
   <main class="site">
     <header class="masthead" aria-label="Afferium">
-      <div class="wordmark">Where the afferent ends</div>
+      <div class="wordmark">Where the afferent <span class="ending">ends</span></div>
     </header>
 
     <section class="definition" aria-label="Afferium definition">
