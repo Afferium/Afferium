@@ -79,7 +79,19 @@
       color: var(--accent-dark);
       display: inline-block;
       letter-spacing: -0.055em;
+      position: relative;
       transform: translateX(0.05em);
+    }
+
+    .wordmark .ending::after {
+      content: "";
+      position: absolute;
+      width: 0.34em;
+      height: 1px;
+      right: -0.33em;
+      top: 0.54em;
+      background: linear-gradient(90deg, rgba(255, 107, 112, 0.25), var(--accent-dark));
+      box-shadow: 0 0 10px rgba(255, 107, 112, 0.42);
     }
 
     .wordmark::after {
