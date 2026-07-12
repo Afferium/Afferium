@@ -83,25 +83,50 @@
       transform: translateX(0.05em);
     }
 
-    .wordmark .ending::after {
+    .endpoint {
+      display: inline-block;
+      width: 0.74em;
+      height: 0.46em;
+      margin-left: -0.02em;
+      position: relative;
+      transform: translateY(0.02em);
+    }
+
+    .endpoint::before {
       content: "";
       position: absolute;
-      width: 0.34em;
+      width: 0.42em;
       height: 1px;
-      right: -0.33em;
-      top: 0.54em;
+      left: 0;
+      top: 0.18em;
       background: linear-gradient(90deg, rgba(255, 107, 112, 0.25), var(--accent-dark));
       box-shadow: 0 0 10px rgba(255, 107, 112, 0.42);
     }
 
-    .wordmark::after {
-      content: "";
+    .endpoint-dot {
+      position: absolute;
+      left: 0.39em;
+      top: 0.09em;
       width: 0.18em;
       height: 0.18em;
       border-radius: 50%;
       background: var(--accent-dark);
-      box-shadow: 0 0 18px rgba(255, 107, 112, 0.38);
-      transform: translate(-0.03em, -0.08em);
+      box-shadow: 0 0 18px rgba(255, 107, 112, 0.42);
+    }
+
+    .endpoint-dot::after {
+      content: "";
+      position: absolute;
+      width: 0.46em;
+      height: 0.3em;
+      right: -0.33em;
+      top: 0.03em;
+      border-right: 1px solid rgba(255, 107, 112, 0.74);
+      border-bottom: 1px solid rgba(255, 107, 112, 0.46);
+      border-radius: 0 0 0.5em 0;
+      transform: rotate(18deg);
+      transform-origin: left top;
+      filter: drop-shadow(0 0 6px rgba(255, 107, 112, 0.24));
     }
 
     .nav {
@@ -287,7 +312,7 @@
 <body>
   <main class="site">
     <header class="masthead" aria-label="Afferium">
-      <div class="wordmark">Where the afferent <span class="ending">ends</span></div>
+      <div class="wordmark">Where the afferent <span class="ending">ends</span><span class="endpoint" aria-hidden="true"><span class="endpoint-dot"></span></span></div>
     </header>
 
     <section class="definition" aria-label="Afferium definition">
