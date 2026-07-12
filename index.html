@@ -121,14 +121,14 @@
       height: 0.26em;
       right: 0.09em;
       top: 0.04em;
-      border-right: 1px solid rgba(255, 107, 112, 0.24);
-      border-bottom: 1px solid rgba(255, 107, 112, 0.24);
+      border-right: 1px solid rgba(255, 107, 112, 0.36);
+      border-bottom: 1px solid rgba(255, 107, 112, 0.38);
       border-radius: 0 0 2em 0;
       transform: rotate(-6deg);
       transform-origin: right top;
-      filter: drop-shadow(0 0 2px rgba(255, 107, 112, 0.12));
-      mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.18) 26%, rgba(0, 0, 0, 0.78) 100%);
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.18) 26%, rgba(0, 0, 0, 0.78) 100%);
+      filter: drop-shadow(0 0 4px rgba(255, 107, 112, 0.2));
+      mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.26) 22%, rgba(0, 0, 0, 0.86) 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.26) 22%, rgba(0, 0, 0, 0.86) 100%);
     }
 
     .nav {
@@ -240,8 +240,12 @@
 
     .definition-copy em {
       color: var(--accent-dark);
+      display: block;
+      font-size: clamp(1.8rem, 4vw, 3.4rem);
       font-style: normal;
       font-weight: 600;
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
     .pronunciation {
