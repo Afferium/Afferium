@@ -57,7 +57,7 @@
     .masthead {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 24px;
       padding: 28px 0;
       border-bottom: 1px solid var(--line);
@@ -69,18 +69,6 @@
       font-weight: 700;
       letter-spacing: 0;
       line-height: 0.9;
-    }
-
-    .wordmark span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      line-height: 1.2;
-      text-transform: uppercase;
     }
 
     .nav {
@@ -236,6 +224,7 @@
     .link-row {
       display: flex;
       align-items: center;
+      flex-direction: column;
       gap: 16px;
       padding-bottom: clamp(56px, 8vw, 96px);
     }
@@ -248,15 +237,10 @@
         width: min(100% - 32px, 680px);
       }
 
-      .nav,
-      .link-row {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
       .idea-list {
-        left: 0;
+        left: 50%;
         right: auto;
+        transform: translateX(-50%);
       }
 
       .definition {
@@ -268,7 +252,7 @@
 <body>
   <main class="site">
     <header class="masthead" aria-label="M.A.R.A. at Afferium">
-      <div class="wordmark">M.A.R.A.<span>afferium</span></div>
+      <div class="wordmark">M.A.R.A.</div>
     </header>
 
     <section class="definition" aria-label="Afferium definition">
