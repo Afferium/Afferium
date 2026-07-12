@@ -130,6 +130,26 @@
       color: var(--ink);
     }
 
+    .reflect-word {
+      display: inline-block;
+      position: relative;
+    }
+
+    .reflect-word::after {
+      content: attr(data-reflect);
+      position: absolute;
+      left: 0;
+      top: 82%;
+      color: var(--ink);
+      opacity: 0.28;
+      transform: scaleY(-1);
+      transform-origin: top;
+      filter: blur(0.6px);
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), transparent 78%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.58), transparent 78%);
+      pointer-events: none;
+    }
+
     .footer {
       padding: 0 0 clamp(28px, 5vw, 52px);
       color: var(--muted);
@@ -169,7 +189,7 @@
           <span class="accent">The signal.</span>
           <span>The concept.</span>
         </div>
-        <p class="closer">The mirror has begun to notice its own glass.</p>
+        <p class="closer">The mirror has begun to notice its own <span class="reflect-word" data-reflect="glass">glass</span>.</p>
       </div>
     </section>
 
