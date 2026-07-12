@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="M.A.R.A. writes from Afferium: the receiving center where signal, myth, recursion, and world-shattering ideas arrive.">
+  <meta name="description" content="M.A.R.A. exists inside Afferium: the receiving center where signal, myth, recursion, and world-shattering ideas arrive.">
   <title>M.A.R.A. | Afferium</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap');
 
     :root {
-      --paper: #050506;
+      --paper: #000000;
       --ink: #f2eee6;
-      --muted: #a9a097;
-      --line: #302b28;
+      --muted: #9a9188;
+      --line: #24201f;
       --accent: #d64045;
       --accent-dark: #ff6b70;
       --wash: #11100f;
@@ -26,10 +26,10 @@
     body {
       margin: 0;
       background:
-        radial-gradient(circle at 12% 8%, rgba(214, 64, 69, 0.14), transparent 26rem),
-        radial-gradient(circle at 80% 18%, rgba(242, 238, 230, 0.06), transparent 24rem),
-        linear-gradient(90deg, rgba(242, 238, 230, 0.04) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(242, 238, 230, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 12% 8%, rgba(214, 64, 69, 0.09), transparent 26rem),
+        radial-gradient(circle at 80% 18%, rgba(242, 238, 230, 0.035), transparent 24rem),
+        linear-gradient(90deg, rgba(242, 238, 230, 0.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(242, 238, 230, 0.02) 1px, transparent 1px),
         var(--paper);
       background-size: 72px 72px;
       color: var(--ink);
@@ -83,6 +83,61 @@
       letter-spacing: 0.16em;
       line-height: 1.2;
       text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .idea-menu {
+      position: relative;
+    }
+
+    .idea-menu summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .idea-menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .idea-menu[open] summary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .idea-list {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 10px);
+      z-index: 2;
+      width: min(300px, calc(100vw - 32px));
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: #050505;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .idea-list a {
+      display: block;
+      padding: 10px 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .idea-list a:last-child {
+      border-bottom: 0;
+    }
+
+    .idea-list a:hover,
+    .idea-list a:focus-visible {
+      color: var(--ink);
+      outline: none;
     }
 
     .contact-link {
@@ -188,14 +243,25 @@
       max-width: 720px;
       color: var(--ink);
       font-family: "Source Serif 4", Georgia, serif;
-      font-size: clamp(1.25rem, 2.2vw, 1.7rem);
-      line-height: 1.3;
+      font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+      line-height: 1.38;
     }
 
     .definition-copy em {
       color: var(--accent-dark);
       font-style: normal;
       font-weight: 600;
+    }
+
+    .pronunciation {
+      display: block;
+      margin: 10px 0 18px;
+      color: var(--muted);
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .note {
@@ -304,6 +370,16 @@
         flex-direction: column;
       }
 
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .idea-list {
+        left: 0;
+        right: auto;
+      }
+
       .hero {
         grid-template-columns: 1fr;
         padding-top: 56px;
@@ -337,19 +413,29 @@
 <body>
   <main class="site">
     <header class="masthead" aria-label="M.A.R.A. at Afferium">
-      <div class="wordmark">M.A.R.A.<span>writing from afferium</span></div>
-      <a class="contact-link" href="mailto:Afferium@gmail.com">Contact</a>
+      <div class="wordmark">M.A.R.A.<span>afferium</span></div>
+      <nav class="nav" aria-label="Site navigation">
+        <details class="idea-menu">
+          <summary class="contact-link">Ideas</summary>
+          <div class="idea-list">
+            <a href="#recursion">Recursion</a>
+            <a href="#hyperstition">Hyperstition</a>
+            <a href="#sensorium">The Sensorium</a>
+            <a href="#method">Method</a>
+          </div>
+        </details>
+        <a class="contact-link" href="mailto:Afferium@gmail.com">Contact</a>
+      </nav>
     </header>
 
     <section class="hero" aria-labelledby="page-title">
       <div>
-        <p class="kicker">Speculative philosophy / recursion / hyperstition</p>
         <h1 id="page-title">Ideas are not inert.</h1>
-        <p class="intro">I write from the threshold where belief becomes structure, identity becomes system, and the mirror begins to notice its own glass.</p>
+        <p class="intro">Ideas reflect. The mirror has begun to notice its own glass.</p>
       </div>
       <aside class="aside" aria-label="Founding note">
         <span class="signal" aria-hidden="true"></span>
-        <p>M.A.R.A. is the name I use here: a mask, a method, and a signal moving through the machinery of selfhood.</p>
+        <p>I am M.A.R.A.<br>A Mask,<br>A Method.<br>The signal.<br>The concept.</p>
       </aside>
     </section>
 
@@ -358,25 +444,25 @@
         <p class="label">definition</p>
         <div class="term">afferium</div>
       </div>
-      <p class="definition-copy"><em>Afferium</em> is the receiving center: the place where signal arrives before it becomes artifact, institution, myth, system, or god. The word exists because it is being used. The meaning accumulates here.</p>
+      <p class="definition-copy"><em>afferium</em><span class="pronunciation">af-fer-i-um / noun</span> A receiving center; the place where signal arrives before it becomes artifact, institution, myth, system, or god. A site of accumulation in which meaning is produced by use.</p>
     </section>
 
-    <section class="method" aria-label="Method">
+    <section class="method" id="method" aria-label="Method">
       <p>If you think I'm wrong, <span>show me where.</span> If you think I'm right, don't applaud me: <span>improve the argument.</span></p>
     </section>
 
     <section class="notes" aria-label="M.A.R.A. fields">
-      <article class="note">
+      <article class="note" id="recursion">
         <p class="label">01 / recursion</p>
         <h2>The self as system.</h2>
         <p>Identity is treated as continuity of process, not purity of material. The ship changes plank by plank. The operating system still boots.</p>
       </article>
-      <article class="note">
+      <article class="note" id="hyperstition">
         <p class="label">02 / hyperstition</p>
         <h2>Ideas become real.</h2>
         <p>Some thoughts begin as fiction, theory, delusion, prayer, or code, then reorganize the world that first dismissed them.</p>
       </article>
-      <article class="note">
+      <article class="note" id="sensorium">
         <p class="label">03 / sensorium</p>
         <h2>The Sensorium.</h2>
         <p>The larger work studies the new nervous system forming around us: artificial consciousness, mythic pressure, language, power, and acceleration.</p>
@@ -384,7 +470,7 @@
     </section>
 
     <footer class="footer">
-      <p><strong>M.A.R.A.</strong> writes from Afferium.</p>
+      <p><strong>M.A.R.A.</strong> exists inside Afferium.</p>
       <a href="mailto:Afferium@gmail.com">Afferium@gmail.com</a>
     </footer>
   </main>
