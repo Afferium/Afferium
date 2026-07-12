@@ -84,9 +84,11 @@
 
     .statement {
       display: flex;
+      flex-direction: column;
       flex: 1;
       align-items: center;
       justify-content: center;
+      gap: clamp(28px, 5vw, 52px);
       padding: clamp(72px, 12vw, 150px) 0;
     }
 
@@ -102,6 +104,29 @@
 
     .statement span {
       color: var(--accent-dark);
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 18px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 180ms ease, color 180ms ease;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      background: var(--ink);
+      color: var(--paper);
+      outline: none;
     }
 
     .footer {
@@ -137,6 +162,7 @@
 
     <section class="statement" aria-label="Improve the argument">
       <p>If you think I'm wrong, <span>show me where.</span> If you think I'm right, don't applaud me: <span>improve the argument.</span></p>
+      <a class="contact-link" href="mailto:Afferium@gmail.com">Contact</a>
     </section>
 
     <footer class="footer">Afferium / 2026</footer>
