@@ -69,7 +69,7 @@
       align-items: baseline;
       gap: 0.08em;
       font-family: "Spectral", "Source Serif 4", Georgia, serif;
-      font-size: clamp(2rem, 5vw, 4.9rem);
+      font-size: clamp(1.72rem, 4.2vw, 3.9rem);
       font-weight: 600;
       letter-spacing: 0;
       line-height: 0.9;
@@ -99,8 +99,8 @@
       height: 1px;
       left: -0.1em;
       top: 0.82em;
-      background: linear-gradient(90deg, rgba(255, 107, 112, 0.25), var(--accent-dark));
-      box-shadow: 0 0 10px rgba(255, 107, 112, 0.42);
+      background: linear-gradient(90deg, rgba(255, 107, 112, 0.16), rgba(255, 107, 112, 0.82));
+      box-shadow: 0 0 6px rgba(255, 107, 112, 0.28);
     }
 
     .endpoint-dot {
@@ -111,22 +111,22 @@
       height: 0.18em;
       border-radius: 50%;
       background: var(--accent-dark);
-      box-shadow: 0 0 18px rgba(255, 107, 112, 0.42);
+      box-shadow: 0 0 12px rgba(255, 107, 112, 0.34);
     }
 
     .endpoint-dot::after {
       content: "";
       position: absolute;
-      width: 4.8em;
-      height: 0.34em;
+      width: 4.55em;
+      height: 0.3em;
       right: 0.09em;
       top: 0.16em;
-      border-right: 1px solid rgba(255, 107, 112, 0.58);
-      border-bottom: 1px solid rgba(255, 107, 112, 0.5);
+      border-right: 1px solid rgba(255, 107, 112, 0.36);
+      border-bottom: 1px solid rgba(255, 107, 112, 0.34);
       border-radius: 0 0 2em 0;
       transform: rotate(-7deg);
       transform-origin: right top;
-      filter: drop-shadow(0 0 6px rgba(255, 107, 112, 0.24));
+      filter: drop-shadow(0 0 3px rgba(255, 107, 112, 0.18));
       mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.38) 34%, #000 100%);
       -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.38) 34%, #000 100%);
     }
