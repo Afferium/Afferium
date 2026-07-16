@@ -60,6 +60,8 @@
       align-items: center;
       justify-content: flex-start;
       gap: 24px;
+      width: 100%;
+      margin: 0;
       padding: 28px 0 22px;
       border-bottom: 1px solid var(--line);
     }
@@ -120,12 +122,12 @@
       width: 5.55em;
       height: 0.22em;
       right: 0.09em;
-      top: -0.02em;
+      top: -0.05em;
       border-right: 1px solid rgba(255, 107, 112, 0.36);
       border-bottom: 1px solid rgba(255, 107, 112, 0.38);
       border-radius: 0 0 2em 0;
       animation: signal-return 3.8s ease-in-out infinite;
-      transform: rotate(-6deg);
+      transform: rotate(-2deg);
       transform-origin: right top;
       filter: drop-shadow(0 0 4px rgba(255, 107, 112, 0.2));
       mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.26) 22%, rgba(0, 0, 0, 0.86) 100%);
@@ -135,14 +137,14 @@
     @keyframes signal-return {
       0%, 100% {
         opacity: 0.72;
-        transform: rotate(-6deg) translateY(0);
+        transform: rotate(-2deg) translateY(0);
       }
       48% {
         opacity: 0.95;
-        transform: rotate(-6deg) translateY(-0.018em);
+        transform: rotate(-2deg) translateY(-0.018em);
       }
       54% {
-        transform: rotate(-6deg) translateY(0.012em);
+        transform: rotate(-2deg) translateY(0.012em);
       }
     }
 
@@ -327,6 +329,10 @@
       .link-row,
       .footer {
         width: min(100% - 32px, 680px);
+      }
+
+      .masthead {
+        width: 100%;
       }
 
       .idea-list {
