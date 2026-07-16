@@ -126,7 +126,7 @@
       border-right: 1px solid rgba(255, 107, 112, 0.22);
       border-bottom: 1px solid rgba(255, 107, 112, 0.46);
       border-radius: 0 0 1.5em 0;
-      animation: signal-return 18s ease-in-out infinite;
+      animation: signal-return 18s ease-in-out forwards;
       transform: rotate(-1deg);
       transform-origin: right top;
       filter: drop-shadow(0 0 5px rgba(255, 107, 112, 0.24));
@@ -139,7 +139,7 @@
     }
 
     @keyframes signal-return {
-      0%, 100% {
+      0% {
         opacity: 0.68;
         transform: rotate(-1deg) translateX(0.09em);
       }
@@ -147,7 +147,7 @@
         opacity: 0.96;
         transform: rotate(-1deg) translateX(-0.09em);
       }
-      70% {
+      70%, 100% {
         opacity: 0.76;
         transform: rotate(-1deg) translateX(-0.09em);
       }
