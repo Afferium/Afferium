@@ -33,7 +33,9 @@ main { width: 100%; flex: 1; }
 .blog-intro { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: clamp(60px, 9vw, 116px) 0 clamp(60px, 8vw, 96px); text-align: center; }
 .eyebrow, .section-label, .essay-tags { font-family: "Inter", system-ui, sans-serif; font-size: .68rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
 .eyebrow { color: var(--muted); margin: 0 0 18px; }
-.blog-intro h1 { margin: 0 0 20px; color: var(--accent); font-family: "Roboto Slab", Georgia, serif; font-size: clamp(3.2rem, 7vw, 5rem); font-weight: 600; line-height: 1; letter-spacing: -.045em; }
+.blog-intro h1 { margin: 0 0 20px; color: var(--accent); font-family: "Roboto Slab", Georgia, serif; font-size: clamp(2rem, 4.5vw, 3.15rem); font-weight: 500; line-height: 1.16; letter-spacing: -.035em; text-wrap: balance; }
+.mirror-word { display: inline-block; white-space: nowrap; }
+.reflected-letter { display: inline-block; transform: scaleX(-1); }
 .intro-copy { margin: 0 auto; max-width: 560px; font-family: "Source Serif 4", Georgia, serif; font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.45; }
 .essay-list { width: min(820px, calc(100% - 48px)); margin: 0 auto; padding: 0 0 90px; }
 .section-label { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--muted); }
