@@ -105,7 +105,7 @@ def build(preview=False):
         notice = ""
         if preview:
             notice = '<aside class="preview-notice"><strong>Design preview</strong> / Sample layout and drafts. This is not the live blog.</aside>'
-        nav = '<a href="' + escape(config["main_url"], quote=True) + '">Afferium</a>'
+        nav = '<a class="home-button" href="' + escape(config["main_url"], quote=True) + '">Home</a>'
         if body_class == "essay-page":
             nav = f'<a href="{prefix}/index.html">Blog</a>' + nav
         return render("base.html", content=content, page_title=escape(title),

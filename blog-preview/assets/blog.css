@@ -30,6 +30,8 @@ main { width: 100%; flex: 1; }
 .top-nav { display: flex; align-items: center; gap: 20px; }
 .top-nav a, .back-link { font-size: .73rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
 .top-nav a:hover, .back-link:hover { color: var(--ink); }
+.top-nav .home-button { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 18px; border: 1px solid var(--ink); border-radius: 999px; color: var(--ink); font-size: .7rem; font-weight: 500; line-height: 1; letter-spacing: .12em; transition: background 180ms ease, color 180ms ease; }
+.top-nav .home-button:hover, .top-nav .home-button:focus-visible { background: var(--ink); color: var(--paper); }
 .blog-intro { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: clamp(60px, 9vw, 116px) 0 clamp(60px, 8vw, 96px); text-align: center; }
 .eyebrow, .section-label, .essay-tags { font-family: "Inter", system-ui, sans-serif; font-size: .68rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
 .eyebrow { color: var(--muted); margin: 0 0 18px; }
