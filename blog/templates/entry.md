@@ -1,7 +1,8 @@
 ---
-title: "Your essay title"
-date: 2026-10-17
-summary: "One or two sentences that introduce the essay in the homepage list."
+title: "Your entry title"
+date: 2026-10-18
+author: "Coral"
+summary: "One or two sentences that introduce the entry in the homepage list."
 tags: [Ideas]
 published: false
 ---
@@ -10,7 +11,7 @@ Start with your opening paragraph. The title above becomes the page heading, so 
 
 ## A section heading
 
-Continue your essay. Use **bold** or *italics* when helpful, and add [a source link](https://example.com) directly in the text.
+Continue your entry. Use **bold** or *italics* when helpful, and add [a source link](https://example.com) directly in the text.
 
 > A short quotation can sit on its own like this. Identify its source and link to it.
 

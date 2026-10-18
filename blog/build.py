@@ -34,6 +34,9 @@ def read_essay(path, today, preview=False):
     for key in ("title", "summary"):
         if not isinstance(data.get(key), str) or not data[key].strip():
             raise ValueError(f"{path.name}: {key} must contain text")
+    author = data.get("author", "")
+    if not isinstance(author, str):
+        raise ValueError(f"{path.name}: author must contain text")
     published = data.get("published", False)
     if not isinstance(published, bool):
         raise ValueError(f"{path.name}: published must be true or false, without quotes")
@@ -60,7 +63,7 @@ def read_essay(path, today, preview=False):
                              extension_configs={"footnotes": {"BACKLINK_TEXT": "↩"}})
     word_count = len(re.findall(r"\b[\w’'-]+\b", re.sub(r"<[^>]+>", " ", body)))
     return {
-        "title": data["title"].strip(), "summary": data["summary"].strip(),
+        "title": data["title"].strip(), "summary": data["summary"].strip(), "author": author.strip(),
         "date": essay_date, "tags": tags, "slug": slug, "body": body,
         "draft": is_draft, "minutes": max(1, math.ceil(word_count / 220)),
     }
@@ -104,7 +107,7 @@ def build(preview=False):
         head_extra = '<meta name="robots" content="noindex, nofollow">' if preview else f'<link rel="canonical" href="{escape(canonical, quote=True)}">'
         notice = ""
         if preview:
-            notice = '<aside class="preview-notice"><strong>Design preview</strong> / Sample layout and drafts. This is not the live blog.</aside>'
+            notice = '<aside class="preview-notice"><strong>Draft preview</strong> / This is not the live blog.</aside>'
         nav = '<a class="home-button" href="' + escape(config["main_url"], quote=True) + '">Home</a>'
         if body_class == "essay-page":
             nav = f'<a href="{prefix}/index.html">Blog</a>' + nav
@@ -117,25 +120,26 @@ def build(preview=False):
     for essay in essays:
         label = '<span class="draft-label">Draft preview</span>' if essay["draft"] else ""
         display_date = essay["date"].strftime("%B %d, %Y").replace(" 0", " ")
-        href = f'essays/{essay["slug"]}/index.html'
+        href = f'entries/{essay["slug"]}/index.html'
         cards.append(f'''<article class="essay-card">
   <p class="card-meta"><time datetime="{essay['date'].isoformat()}">{display_date}</time><span>{essay['minutes']} min read</span>{label}</p>
   <h3><a href="{href}">{escape(essay['title'])}</a></h3>
   <p class="card-summary">{escape(essay['summary'])}</p>
-  <a class="read-link" href="{href}" aria-label="Read {escape(essay['title'], quote=True)}">Read essay <span aria-hidden="true">↗</span></a>
+  <a class="read-link" href="{href}" aria-label="Read {escape(essay['title'], quote=True)}">Read entry <span aria-hidden="true">↗</span></a>
 </article>''')
         article = render("essay.html", prefix="../..", title=escape(essay["title"]),
                          summary=escape(essay["summary"]), date_iso=essay["date"].isoformat(),
                          date_display=display_date, reading_minutes=essay["minutes"],
-                         tags=escape(" / ".join(essay["tags"]) or "Essay"), body=essay["body"])
-        target = output / "essays" / essay["slug"]
+                         tags=escape(" / ".join(essay["tags"]) or "Entry"), body=essay["body"],
+                         byline=f'<span>By {escape(essay["author"])}</span><span aria-hidden="true"> / </span>' if essay["author"] else "")
+        target = output / "entries" / essay["slug"]
         target.mkdir(parents=True)
         (target / "index.html").write_text(page(article, f'{essay["title"]} | Afferium', essay["summary"],
-                                               prefix="../..", path=f'essays/{essay["slug"]}/', body_class="essay-page"), encoding="utf-8")
-    empty = '<div class="empty-state"><h3>The first essay is on its way.</h3><p>A space for following ideas further.</p></div>'
+                                               prefix="../..", path=f'entries/{essay["slug"]}/', body_class="essay-page"), encoding="utf-8")
+    empty = '<div class="empty-state"><h3>The first entry is on its way.</h3><p>A space for following ideas further.</p></div>'
     home = render("home.html", intro=escape(config["description"]),
-                  list_label="Essays" if not preview else "Essay preview",
-                  count_label=f'{len(essays)} {"essay" if len(essays) == 1 else "essays"}' if essays else "",
+                  list_label="Entries",
+                  count_label=f'{len(essays)} {"entry" if len(essays) == 1 else "entries"}' if essays else "",
                   essays="\n".join(cards) if cards else empty)
     (output / "index.html").write_text(page(home, "Blog | Afferium", config["description"], body_class="blog-home"), encoding="utf-8")
     if not preview:
@@ -143,7 +147,7 @@ def build(preview=False):
         (output / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
     else:
         (output / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
-    print(f"Built {len(essays)} {'preview' if preview else 'published'} essay(s) into {output.name}/")
+    print(f"Built {len(essays)} {'preview' if preview else 'published'} entry/entries into {output.name}/")
     return output
 
 
