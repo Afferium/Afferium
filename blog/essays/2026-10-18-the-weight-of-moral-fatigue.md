@@ -1,7 +1,7 @@
 ---
 title: "The Weight of Moral Fatigue"
 date: 2026-10-18
-author: "Coral"
+author: "M.A.R.A"
 summary: "Who is ultimately responsible for the moral framework of society, and are all active participants allowed to have a voice in creating it?"
 tags: [Culture, Religion, Technology]
 published: true

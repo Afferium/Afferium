@@ -34,7 +34,7 @@ def read_essay(path, today, preview=False):
     for key in ("title", "summary"):
         if not isinstance(data.get(key), str) or not data[key].strip():
             raise ValueError(f"{path.name}: {key} must contain text")
-    author = data.get("author", "")
+    author = data.get("author", "M.A.R.A")
     if not isinstance(author, str):
         raise ValueError(f"{path.name}: author must contain text")
     published = data.get("published", False)

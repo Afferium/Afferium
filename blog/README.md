@@ -16,7 +16,7 @@ The small metadata block at the top looks like this:
 ---
 title: "Your entry title"
 date: 2026-10-17
-author: "Coral"
+author: "M.A.R.A"
 summary: "A short introduction shown beneath the title on the homepage."
 tags: [Ideas, Technology]
 published: false

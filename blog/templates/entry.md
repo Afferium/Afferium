@@ -1,7 +1,7 @@
 ---
 title: "Your entry title"
 date: 2026-10-18
-author: "Coral"
+author: "M.A.R.A"
 summary: "One or two sentences that introduce the entry in the homepage list."
 tags: [Ideas]
 published: false
